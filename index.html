@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WNS Construction Sdn Bhd | Premium Contracting & Construction</title>
+    
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Custom Configuration to match the corporate logo colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandGold: '#cca034',      /* Premium warm gold from logo */
+                        brandCharcoal: '#2e3033',  /* Slate grey from logo text */
+                        brandDark: '#121212',      /* Deep background dark */
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Font Awesome for clean industrial/construction icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-white text-zinc-800 antialiased font-sans">
+
+    <!-- 1. HEADER / NAVIGATION BAR -->
+    <header class="sticky top-0 z-50 bg-brandDark/95 backdrop-blur-md text-white border-b border-zinc-800 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Company Logo Image -->
+            <a href="#" class="flex items-center">
+                <img src="assets/logo.jpeg" alt="WNS Construction Logo" class="h-16 w-auto object-contain py-1">
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm tracking-wide">
+                <a href="#" class="text-brandGold transition">Home</a>
+                <a href="#about" class="text-zinc-300 hover:text-brandGold transition">About Us</a>
+                <a href="#services" class="text-zinc-300 hover:text-brandGold transition">Services</a>
+                <a href="#projects" class="text-zinc-300 hover:text-brandGold transition">Projects</a>
+                <a href="#contact" class="text-zinc-300 hover:text-brandGold transition">Contact Us</a>
+            </nav>
+
+            <!-- Desktop Right CTA -->
+            <div class="hidden md:flex items-center">
+                <a href="#contact" class="bg-brandGold hover:bg-amber-600 text-brandDark font-bold px-5 py-2.5 rounded text-sm tracking-wide transition shadow-lg shadow-brandGold/10">
+                    Get a Free Quote
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-btn" class="md:hidden text-zinc-300 hover:text-brandGold focus:outline-none p-2 text-xl" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dynamic Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 border-t border-zinc-800 px-4 py-4 space-y-3 font-medium shadow-xl">
+            <a href="#" class="block text-brandGold py-2">Home</a>
+            <a href="#about" class="block text-zinc-300 hover:text-brandGold py-2 transition">About Us</a>
+            <a href="#services" class="block text-zinc-300 hover:text-brandGold py-2 transition">Services</a>
+            <a href="#projects" class="block text-zinc-300 hover:text-brandGold py-2 transition">Projects</a>
+            <a href="#contact" class="block text-zinc-300 hover:text-brandGold py-2 transition">Contact Us</a>
+            <a href="#contact" class="block bg-brandGold text-center text-brandDark font-bold py-3 rounded mt-4 transition">Get a Free Quote</a>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section class="relative min-h-[85vh] flex items-center bg-zinc-950 text-white overflow-hidden">
+        <!-- Structural Placeholder Background with Dark Overlay -->
+        <div class="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-overlay" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-brandDark via-brandDark/80 to-transparent"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full z-10">
+            <div class="max-w-3xl">
+                <span class="inline-flex items-center gap-2 text-brandGold font-bold tracking-widest text-xs uppercase mb-4 bg-brandGold/10 px-3 py-1.5 rounded-full border border-brandGold/20">
+                    <i class="fa-solid fa-hard-hat text-[10px]"></i> WNS Construction Sdn Bhd
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-none mb-6 text-white">
+                    Building Your Vision With <span class="text-brandGold">Quality & Precision</span>
+                </h1>
+                <p class="text-zinc-300 text-base sm:text-lg lg:text-xl font-normal mb-10 max-w-2xl leading-relaxed">
+                    Premium structural engineering, renovations, architectural designs, and general contracting across Malaysia. We construct realities from blueprints.
+                </p>
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                    <a href="#projects" class="bg-brandGold hover:bg-amber-600 text-brandDark font-bold px-8 py-4 rounded text-center tracking-wide transition shadow-lg shadow-brandGold/20">
+                        View Our Projects
+                    </a>
+                    <a href="#services" class="border border-zinc-600 hover:border-white text-white font-medium px-8 py-4 rounded text-center tracking-wide transition bg-white/5 backdrop-blur-sm">
+                        Our Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. BRIEF INTRO / ABOUT SECTION -->
+    <section id="about" class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                
+                <!-- Left Content Block -->
+                <div>
+                    <span class="text-brandGold uppercase font-bold tracking-wider text-xs block mb-2">Welcome to WNS</span>
+                    <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-brandCharcoal mb-6">
+                        Reliable Engineering and Construction Services
+                    </h2>
+                    <p class="text-zinc-600 leading-relaxed mb-6">
+                        WNS Construction delivers dynamic solutions across commercial and structural architecture. We emphasize client trust, execution timelines, and strict regulatory safety practices.
+                    </p>
+                    <p class="text-zinc-600 leading-relaxed mb-8">
+                        Whether expanding industrial infrastructure or modernizing residential facilities, our dedicated teams prioritize build integrity and exceptional craftsmanship at every step.
+                    </p>
+                    
+                    <!-- Stats Badges row -->
+                    <div class="grid grid-cols-2 gap-6 pt-6 border-t border-zinc-100">
+                        <div class="flex gap-3 items-start">
+                            <i class="fa-solid fa-circle-check text-brandGold text-lg mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-zinc-900 text-sm">Certified Standards</h4>
+                                <p class="text-xs text-zinc-500 mt-0.5">Full compliance with safety regulations.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3 items-start">
+                            <i class="fa-solid fa-clock text-brandGold text-lg mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-zinc-900 text-sm">On-Time Delivery</h4>
+                                <p class="text-xs text-zinc-500 mt-0.5">Strict schedule management workflows.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual Element Grid -->
+                <div class="relative grid grid-cols-12 gap-4">
+                    <div class="col-span-8">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" alt="Active Worksite Management" class="rounded shadow-xl w-full h-64 object-cover" />
+                    </div>
+                    <div class="col-span-4 flex items-end">
+                        <div class="bg-brandGold p-6 rounded shadow-xl w-full aspect-square flex flex-col justify-between text-brandDark">
+                            <i class="fa-solid fa-trophy text-3xl opacity-80"></i>
+                            <div>
+                                <span class="text-3xl font-black block tracking-tight">100%</span>
+                                <span class="text-xs font-bold uppercase tracking-wider opacity-90">Commitment</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-4">
+                        <div class="bg-brandCharcoal text-white p-6 rounded shadow-xl w-full aspect-square flex flex-col justify-between">
+                            <i class="fa-solid fa-helmet-safety text-3xl text-brandGold"></i>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-zinc-300">Safety First Certified</span>
+                        </div>
+                    </div>
+                    <div class="col-span-8">
+                        <img src="https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&w=600&q=80" alt="Completed Modern Facility" class="rounded shadow-xl w-full h-48 object-cover" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. FEATURED SERVICES GRID -->
+    <section id="services" class="py-20 lg:py-28 bg-zinc-50 border-y border-zinc-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brandGold uppercase font-bold tracking-wider text-xs block mb-2">Capabilities</span>
+                <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-brandCharcoal">Core Professional Solutions</h2>
+                <div class="h-1 w-20 bg-brandGold mx-auto mt-4 rounded-full"></div>
+                <p class="text-zinc-500 text-sm mt-4">Showing prominent divisions. View the full list via our comprehensive Services index.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Service Card 1 -->
+                <div class="bg-white p-8 rounded border border-zinc-200 shadow-sm hover:shadow-xl hover:border-brandGold/40 transition duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded bg-zinc-900 text-brandGold flex items-center justify-center text-xl mb-6 group-hover:bg-brandGold group-hover:text-brandDark transition duration-300">
+                            <i class="fa-solid fa-trowel-bricks"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-zinc-900 mb-3">Building Construction</h3>
+                        <p class="text-zinc-500 text-sm leading-relaxed">Complete structural implementation from excavation layouts to high-elevation corporate installations.</p>
+                    </div>
+                    <a href="#contact" class="text-xs font-bold text-brandGold hover:text-amber-600 mt-6 inline-flex items-center gap-1.5 tracking-wider uppercase">Inquire Now <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-white p-8 rounded border border-zinc-200 shadow-sm hover:shadow-xl hover:border-brandGold/40 transition duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded bg-zinc-900 text-brandGold flex items-center justify-center text-xl mb-6 group-hover:bg-brandGold group-hover:text-brandDark transition duration-300">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-zinc-900 mb-3">Wiring & Electrical</h3>
+                        <p class="text-zinc-500 text-sm leading-relaxed">Industrial grade primary panel layout arrangements, systemic commercial distributions, and safety certifications.</p>
+                    </div>
+                    <a href="#contact" class="text-xs font-bold text-brandGold hover:text-amber-600 mt-6 inline-flex items-center gap-1.5 tracking-wider uppercase">Inquire Now <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="bg-white p-8 rounded border border-zinc-200 shadow-sm hover:shadow-xl hover:border-brandGold/40 transition duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded bg-zinc-900 text-brandGold flex items-center justify-center text-xl mb-6 group-hover:bg-brandGold group-hover:text-brandDark transition duration-300">
+                            <i class="fa-solid fa-droplet"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-zinc-900 mb-3">Plumbing Services</h3>
+                        <p class="text-zinc-500 text-sm leading-relaxed">Integrated high-pressure line setups, centralized drainage configurations, and facility system repairs.</p>
+                    </div>
+                    <a href="#contact" class="text-xs font-bold text-brandGold hover:text-amber-600 mt-6 inline-flex items-center gap-1.5 tracking-wider uppercase">Inquire Now <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="bg-white p-8 rounded border border-zinc-200 shadow-sm hover:shadow-xl hover:border-brandGold/40 transition duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded bg-zinc-900 text-brandGold flex items-center justify-center text-xl mb-6 group-hover:bg-brandGold group-hover:text-brandDark transition duration-300">
+                            <i class="fa-solid fa-compass-drafting"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-zinc-900 mb-3">General Contracting</h3>
+                        <p class="text-zinc-500 text-sm leading-relaxed">End-to-end resource logistics management, site procurement oversight, and dynamic subcontractor coordination.</p>
+                    </div>
+                    <a href="#contact" class="text-xs font-bold text-brandGold hover:text-amber-600 mt-6 inline-flex items-center gap-1.5 tracking-wider uppercase">Inquire Now <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. FEATURED PROJECTS GALLERY -->
+    <section id="projects" class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 lg:mb-16">
+                <div>
+                    <span class="text-brandGold uppercase font-bold tracking-wider text-xs block mb-2">Our Portfolio</span>
+                    <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-brandCharcoal">Featured Engagements</h2>
+                </div>
+                <p class="text-zinc-500 text-sm max-w-md mt-4 md:mt-0 leading-relaxed">
+                    A curated selection of industrial developments and dynamic architectural renovations executed completely by our teams.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project Image Item 1 -->
+                <div class="group relative bg-zinc-900 rounded overflow-hidden aspect-[4/3] shadow-md">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Modern Residential Facility" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90 group-hover:opacity-60" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition duration-300">
+                        <span class="text-xs font-bold text-brandGold uppercase tracking-wider mb-1">Residential Development</span>
+                        <h4 class="text-white font-bold text-lg">Premium Modern Renovation</h4>
+                    </div>
+                </div>
+
+                <!-- Project Image Item 2 -->
+                <div class="group relative bg-zinc-900 rounded overflow-hidden aspect-[4/3] shadow-md">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Commercial Corporate Headquarters" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90 group-hover:opacity-60" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition duration-300">
+                        <span class="text-xs font-bold text-brandGold uppercase tracking-wider mb-1">Commercial Structure</span>
+                        <h4 class="text-white font-bold text-lg">High-Rise Headquarters Foundation</h4>
+                    </div>
+                </div>
+
+                <!-- Project Image Item 3 -->
+                <div class="group relative bg-zinc-900 rounded overflow-hidden aspect-[4/3] shadow-md">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Industrial Facility Space Optimization" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90 group-hover:opacity-60" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition duration-300">
+                        <span class="text-xs font-bold text-brandGold uppercase tracking-wider mb-1">Industrial Logistics</span>
+                        <h4 class="text-white font-bold text-lg">Structural Warehouse System</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 6. HIGH CONTRAST CALL-TO-ACTION (CTA) BANNER -->
+    <section class="bg-brandCharcoal text-white relative py-16 overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center opacity-10 mix-blend-overlay" style="background-image: url('https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=1200&q=80');"></div>
+        <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+            <h2 class="text-3xl sm:text-4xl font-black tracking-tight mb-4">Have project requirements in mind?</h2>
+            <p class="text-zinc-300 text-sm sm:text-base max-w-xl mx-auto mb-8">
+                Let's construct structural solutions together. Contact our estimating division for a detailed plan framework evaluation.
+            </p>
+            <a href="#contact" class="inline-block bg-brandGold hover:bg-amber-600 text-brandDark font-bold px-8 py-4 rounded tracking-wide transition shadow-lg shadow-amber-500/10">
+                Get in Touch Today
+            </a>
+        </div>
+    </section>
+
+    <!-- 7. CONTACT US & BRIEF USER INQUIRY FORM -->
+    <section id="contact" class="py-20 lg:py-28 bg-zinc-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-start">
+                
+                <!-- Left Details Info Block (5 Columns) -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="text-brandGold uppercase font-bold tracking-wider text-xs block mb-2">Connect</span>
+                        <h2 class="text-3xl font-black tracking-tight text-brandCharcoal">Get in Contact</h2>
+                        <p class="text-zinc-500 text-sm mt-2 leading-relaxed">Reach out directly through communication lines or submit the verification form.</p>
+                    </div>
+
+                    <div class="space-y-4 text-sm text-zinc-600">
+                        <div class="flex items-start gap-4 p-4 bg-white rounded border border-zinc-200 shadow-sm">
+                            <i class="fa-solid fa-location-dot text-brandGold text-lg mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-zinc-900 mb-0.5">Company Office</h4>
+                                <p class="leading-relaxed text-xs">Selangor, Malaysia</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 bg-white rounded border border-zinc-200 shadow-sm">
+                            <i class="fa-solid fa-phone text-brandGold text-lg mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-zinc-900 mb-0.5">Phone Line</h4>
+                                <p class="text-xs text-zinc-700 hover:text-brandGold cursor-pointer">+60 3-XXXX XXXX</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 bg-white rounded border border-zinc-200 shadow-sm">
+                            <i class="fa-solid fa-envelope text-brandGold text-lg mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-zinc-900 mb-0.5">Email Communications</h4>
+                                <p class="text-xs text-zinc-700 hover:text-brandGold cursor-pointer">info@wnsconstruction.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 bg-white rounded border border-zinc-200 shadow-sm">
+                            <i class="fa-solid fa-clock text-brandGold text-lg mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-zinc-900 mb-0.5">Operating Hours</h4>
+                                <p class="text-xs leading-relaxed">Monday – Friday: 9:00 AM – 6:00 PM<br>Saturday & Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Form Data Capture Block (7 Columns) -->
+                <div class="lg:col-span-7 bg-white p-6 sm:p-10 rounded border border-zinc-200 shadow-sm">
+                    <h3 class="text-xl font-bold text-zinc-900 mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-paper-plane text-sm text-brandGold"></i> Send Message Inquiry
+                    </h3>
+                    
+                    <!-- Static Form Element Layout Structure -->
+                    <form class="space-y-5" onsubmit="event.preventDefault(); alert('Form submitted successfully (Mockup Concept)!');">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2">Your Name</label>
+                                <input type="text" placeholder="John Doe" required class="w-full border border-zinc-300 rounded px-4 py-3 text-sm focus:outline-none focus:border-brandGold transition" />
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2">Email Address</label>
+                                <input type="email" placeholder="john@example.com" required class="w-full border border-zinc-300 rounded px-4 py-3 text-sm focus:outline-none focus:border-brandGold transition" />
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2">Subject Option</label>
+                            <select class="w-full border border-zinc-300 bg-white rounded px-4 py-3 text-sm focus:outline-none focus:border-brandGold transition">
+                                <option>Building Construction Estimate</option>
+                                <option>Renovation Service Inquiry</option>
+                                <option>Wiring & System Distribution</option>
+                                <option>Other General Contracting Queries</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2">Message Content</label>
+                            <textarea rows="4" placeholder="Detail your structure parameters requirements..." required class="w-full border border-zinc-300 rounded px-4 py-3 text-sm focus:outline-none focus:border-brandGold transition"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brandCharcoal hover:bg-zinc-800 text-white font-bold py-4 rounded text-sm tracking-wider uppercase transition">
+                            Submit Inquiry Form
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FOOTER ARCHITECTURE -->
+    <footer class="bg-brandDark text-zinc-400 text-sm border-t border-zinc-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+            
+            <!-- Column 1: Core Bio Branding Info with Logo Image -->
+            <div class="space-y-4">
+                <a href="#" class="inline-block">
+                    <img src="assets/logo.jpeg" alt="WNS Construction Logo" class="h-14 w-auto object-contain">
+                </a>
+                <p class="text-xs text-zinc-500 leading-relaxed">
+                    Premium systemic construction engineering, layout infrastructure developments, and contracting execution solutions tailored across Malaysia.
+                </p>
+            </div>
+
+            <!-- Column 2: Navigation Links Block -->
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-wider text-xs mb-4 border-l-2 border-brandGold pl-2">Quick Navigation</h4>
+                <ul class="space-y-2.5 text-xs">
+                    <li><a href="#" class="hover:text-brandGold transition">Home Landing</a></li>
+                    <li><a href="#about" class="hover:text-brandGold transition">About Parameters</a></li>
+                    <li><a href="#services" class="hover:text-brandGold transition">Services Capabilities</a></li>
+                    <li><a href="#projects" class="hover:text-brandGold transition">Projects Index</a></li>
+                    <li><a href="#contact" class="hover:text-brandGold transition">Contact Terminal</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Core Services References -->
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-wider text-xs mb-4 border-l-2 border-brandGold pl-2">Services</h4>
+                <ul class="space-y-2.5 text-xs text-zinc-500">
+                    <li>Building Construction</li>
+                    <li>Renovation Works</li>
+                    <li>Wiring & Electrical</li>
+                    <li>Plumbing Systems</li>
+                    <li>General Contracting</li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact Terminal Details -->
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-wider text-xs mb-4 border-l-2 border-brandGold pl-2">Office Detail</h4>
+                <ul class="space-y-3 text-xs">
+                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-map-pin text-brandGold mt-0.5"></i> <span>Selangor, Malaysia</span></li>
+                    <li class="flex items-center gap-2.5"><i class="fa-solid fa-phone text-brandGold"></i> <span>+60 3-XXXX XXXX</span></li>
+                    <li class="flex items-center gap-2.5"><i class="fa-solid fa-envelope text-brandGold"></i> <span>info@wnsconstruction.com</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright Line Block -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-zinc-800 text-center text-xs text-zinc-600">
+            <p>&copy; 2026 WNS Construction. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 9. FLOATING ACTION INTERFACES -->
+    <!-- Fixed Interactive WhatsApp Floating Interface Component Element -->
+    <a href="https://wa.me/60123456789" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-xl transition-all hover:scale-110 active:scale-95 group" aria-label="Contact via WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="absolute right-16 bg-zinc-900 text-white text-xs font-bold px-3 py-1.5 rounded shadow-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none border border-zinc-800">Chat via WhatsApp</span>
+    </a>
+
+    <!-- 10. INTERACTION SCRIPTS -->
+    <script>
+        // Smooth Dropdown Menu Functionality For Mobile Responsive Screen Width Viewports
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = menuBtn.querySelector('i');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            
+            // Toggles dynamic hamburger icon transformations between bars vs X cross symbols
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.className = 'fa-solid fa-bars';
+            } else {
+                menuIcon.className = 'fa-solid fa-xmark';
+            }
+        });
+
+        // Auto collapse mobile responsive view menu block on click events for performance tracking
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.className = 'fa-solid fa-bars';
+            });
+        });
+    </script>
+</body>
+</html>
