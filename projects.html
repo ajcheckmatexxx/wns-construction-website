@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects | WNS Construction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { brandGold: '#cca034', brandCharcoal: '#2e3033', brandDark: '#121212' } } }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-white text-zinc-800 antialiased font-sans">
+
+    <header class="sticky top-0 z-50 bg-brandDark text-white border-b border-zinc-800 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+            <a href="index.html"><img src="assets/logo.jpeg" alt="WNS Logo" class="h-16 w-auto object-contain py-1"></a>
+            
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm tracking-wide">
+                <a href="index.html" class="text-zinc-300 hover:text-brandGold transition">Home</a>
+                <a href="about.html" class="text-zinc-300 hover:text-brandGold transition">About Us</a>
+                <a href="services.html" class="text-zinc-300 hover:text-brandGold transition">Services</a>
+                <a href="projects.html" class="text-brandGold transition">Projects</a>
+                <a href="index.html#contact" class="text-zinc-300 hover:text-brandGold transition">Contact Us</a>
+            </nav>
+            <a href="index.html#contact" class="hidden md:inline-block bg-brandGold text-brandDark font-bold px-5 py-2.5 rounded text-sm transition">Get a Free Quote</a>
+
+            <button id="menu-btn" class="md:hidden text-zinc-300 hover:text-brandGold focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-brandDark border-t border-zinc-800 px-4 py-4 space-y-3">
+            <a href="index.html" class="block text-zinc-300 hover:text-brandGold transition text-sm font-medium">Home</a>
+            <a href="about.html" class="block text-zinc-300 hover:text-brandGold transition text-sm font-medium">About Us</a>
+            <a href="services.html" class="block text-zinc-300 hover:text-brandGold transition text-sm font-medium">Services</a>
+            <a href="projects.html" class="block text-brandGold transition text-sm font-medium">Projects</a>
+            <a href="index.html#contact" class="block text-zinc-300 hover:text-brandGold transition text-sm font-medium">Contact Us</a>
+        </div>
+    </header>
+
+    <section class="bg-zinc-950 text-white py-16 text-center relative">
+        <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80');"></div>
+        <div class="relative z-10">
+            <h1 class="text-4xl font-black tracking-tight text-white mb-2">Our Work Portfolio</h1>
+            <p class="text-brandGold text-sm uppercase tracking-widest font-bold">Quality & Excellence in Action</p>
+        </div>
+    </section>
+
+    <section class="py-16 max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            
+            <div class="overflow-hidden rounded-lg border border-zinc-200 shadow-sm bg-zinc-50 aspect-[4/3]">
+                <img src="assets/project1.jpg" alt="WNS Project" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+
+            <div class="overflow-hidden rounded-lg border border-zinc-200 shadow-sm bg-zinc-50 md:row-span-2 aspect-[3/4] md:aspect-auto md:h-full">
+                <img src="assets/project2.jpg" alt="WNS Project" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+
+            <div class="overflow-hidden rounded-lg border border-zinc-200 shadow-sm bg-zinc-50 aspect-[4/3]">
+                <img src="assets/project3.jpg" alt="WNS Project" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+
+            <div class="overflow-hidden rounded-lg border border-zinc-200 shadow-sm bg-zinc-50 aspect-[4/3]">
+                <img src="assets/project4.jpg" alt="WNS Project" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+
+            <div class="overflow-hidden rounded-lg border border-zinc-200 shadow-sm bg-zinc-50 aspect-[4/3]">
+                <img src="assets/project5.jpg" alt="WNS Project" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+
+            <div class="overflow-hidden rounded-lg border border-zinc-200 shadow-sm bg-zinc-50 md:row-span-2 aspect-[3/4] md:aspect-auto md:h-full">
+                <video class="w-full h-full object-cover" controls muted loop playsinline>
+                    <source src="assets/project-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="overflow-hidden rounded-lg border border-zinc-200 shadow-sm bg-zinc-50 aspect-[4/3]">
+                <img src="assets/project7.jpg" alt="WNS Project" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+
+            <div class="overflow-hidden rounded-lg border border-zinc-200 shadow-sm bg-zinc-50 aspect-[4/3]">
+                <img src="assets/project8.jpg" alt="WNS Project" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+
+            <div class="overflow-hidden rounded-lg border border-zinc-200 shadow-sm bg-zinc-50 aspect-[4/3]">
+                <img src="assets/project9.jpg" alt="WNS Project" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+
+            <div class="overflow-hidden rounded-lg border border-zinc-200 shadow-sm bg-zinc-50 md:row-span-2 aspect-[3/4] md:aspect-auto md:h-full">
+                <img src="assets/project10.jpg" alt="WNS Project" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+
+            <div class="overflow-hidden rounded-lg border border-zinc-200 shadow-sm bg-zinc-50 aspect-[4/3]">
+                <img src="assets/project11.jpg" alt="WNS Project" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+
+            <div class="overflow-hidden rounded-lg border border-zinc-200 shadow-sm bg-zinc-50 aspect-[4/3]">
+                <img src="assets/project12.jpg" alt="WNS Project" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+
+            <div class="overflow-hidden rounded-lg border border-zinc-200 shadow-sm bg-zinc-50 aspect-[4/3]">
+                <img src="assets/project13.jpg" alt="WNS Project" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+
+            <div class="overflow-hidden rounded-lg border border-zinc-200 shadow-sm bg-zinc-50 aspect-[4/3]">
+                <img src="assets/project14.jpg" alt="WNS Project" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+
+            <div class="overflow-hidden rounded-lg border border-zinc-200 shadow-sm bg-zinc-50 aspect-[4/3]">
+                <img src="assets/project15.jpg" alt="WNS Project" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+
+            <div class="overflow-hidden rounded-lg border border-zinc-200 shadow-sm bg-zinc-50 aspect-[4/3]">
+                <img src="assets/project16.jpg" alt="WNS Project" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+
+            <div class="overflow-hidden rounded-lg border border-zinc-200 shadow-sm bg-zinc-50 aspect-[4/3]">
+                <img src="assets/project17.jpg" alt="WNS Project" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+
+             <div class="overflow-hidden rounded-lg border border-zinc-200 shadow-sm bg-zinc-50 aspect-[4/3]">
+                <img src="assets/project6.jpg" alt="WNS Project" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-brandDark text-zinc-500 text-xs py-8 text-center border-t border-zinc-800">
+        <p>&copy; 2026 WNS Construction. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
